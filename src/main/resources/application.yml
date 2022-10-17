@@ -1,0 +1,22 @@
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+service:
+  login:
+    name: login-service
+    url: http://154.53.58.243:3030
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api-sr
+
+spring:
+  application:
+    name: Rest Consumer
+
