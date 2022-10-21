@@ -4,13 +4,16 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
-        loggerLevel: basic
+        loggerLevel: full
 
 service:
+  url: http://154.53.58.243:3030/api/v1
   login:
     name: login-service
-    url: http://154.53.58.243:3030
-
+  menu:
+    name: menu-service
+  rol:
+    name: rol-service
 server:
   port: 8080
   servlet:
