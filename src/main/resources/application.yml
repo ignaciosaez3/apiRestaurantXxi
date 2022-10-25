@@ -18,6 +18,7 @@ service:
     name: user-service
   table:
     name: table-service
+
 server:
   port: 8080
   servlet:
