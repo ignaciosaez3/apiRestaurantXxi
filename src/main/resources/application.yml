@@ -7,7 +7,7 @@ feign:
         loggerLevel: full
 
 service:
-  url: http://154.53.58.243:3030/api/v1
+  url: http://154.53.58.243:3030/api
   login:
     name: login-service
   menu:
@@ -18,6 +18,25 @@ service:
     name: user-service
   table:
     name: table-service
+  bill:
+    name: bill-service
+  category:
+    name: category-service
+  provider:
+    name: provider-service
+  email:
+    name: email-service
+  ingredient:
+    name: ingredient-service
+  recipe:
+    name: recipe-service
+  image:
+    name: image-service
+    validations:
+      min_pixels: El tamaño de la imagen debe ser mayor a 500x500
+
+
+
 
 server:
   port: 8080

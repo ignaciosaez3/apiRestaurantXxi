@@ -34,4 +34,13 @@ public class UserService {
     public ResponseEntity<Object> UserUpdatePassword(@PathVariable String id,@RequestBody Object json) {
         return userClient.UserUpdatePass(id,json);
     }
+    @GetMapping("/getAllUser")
+    public ResponseEntity<Object> getAllUser() {
+        return userClient.getAllUser();
+    }
+
+    @GetMapping("/getUser/{id}")
+    public ResponseEntity<Object> getUserById(@PathVariable String id) {
+        return userClient.getUserById(id);
+    }
 }

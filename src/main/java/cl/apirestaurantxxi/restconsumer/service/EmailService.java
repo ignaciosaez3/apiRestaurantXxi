@@ -1,6 +1,6 @@
 package cl.apirestaurantxxi.restconsumer.service;
 
-import cl.apirestaurantxxi.restconsumer.client.LoginClient;
+import cl.apirestaurantxxi.restconsumer.client.EmailClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,23 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/email")
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class LoginService {
+public class EmailService {
 
-    private final LoginClient loginClient;
-
+    private final EmailClient emailClient;
     @PostMapping
-    public ResponseEntity<Object> login(@RequestBody Object json) {
-        return loginClient.login(json);
+    public ResponseEntity<Object> sendEmail(@RequestBody Object json){
+        return emailClient.sendEmail(json);
     }
-
-    @PostMapping("/refreshToken")
-    public ResponseEntity<Object> refreshToken(@RequestBody Object json) {
-        return loginClient.refreshToken(json);
-    }
-
-
-
 }

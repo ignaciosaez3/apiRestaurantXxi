@@ -1,4 +1,4 @@
-package cl.apirestaurantxxi.restconsumer.client;
+package cl.apirestaurantxxi.restconsumer.exception;
 
 import feign.Response;
 import feign.Util;
